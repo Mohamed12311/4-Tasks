@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Page1 </title>
+<meta charset="UTF-8">
+<style>
+.I{
+    background-color:#64ffda;
+	padding-bottom:1px;
+}
+nav{
+	text-align:center;
+	background-color:#004d40;
+}
+nav ul{
+	width:auto;
+	overflow:auto;
+	margin-right:60px;
+}
+nav ul li{
+	display:inline-block;
+	list-style:none;
+	padding:25px 25px;
+}
+nav ul li:hover{
+	border:1px dotted #fff;
+	
+}
+nav ul .active{
+	border:1px dotted #fff;
+}
+nav ul li a{
+	text-decoration:none;
+	color:#fff;
+	font-size:20px;
+}
+</style>
+<script>
+function MyB(){
+    var x=document.getElementById('F');
+	var text="";
+	for(var i=0; i<x.length; i++){
+	text +="<br>"+ " " + x.elements[i].value +"<br>";
+	}
+	document.getElementById('out').innerHTML=text;
+	
+	var A = document.getElementById('A').value;
+    var b = document.getElementById('b').value;
+    var C = document.getElementById('C').value;
+    var D = document.getElementById('D').value;
+
+	if(A==="" || b==="" || C==0 || D===""){
+	     alert("Please Enter Values ???");
+		 return;
+	}
+
+}
+</script>
+</head>
+<body>
+<div class="I">
+<img src="index1.png" width="100" height="100">
+<p style="margin-left:980px;font-size:30px;color:#00695c"> Wellcome To DELL Website <p>
+</div>
+<div style="background-color:#fff9c4;padding-top:4px">
+<nav>
+<ul>
+<li><a href="#"> Home </a></li>
+<li><a href="#"> Services </a></li>
+<li><a href="#"> Products </a></li>
+<li><a href="#"> About US </a></li>
+<li><a href="#"> Contact US </a></li>
+</ul>
+</nav>
+<form id="F" style="border:1px solid white;width:600px;background-color:#fff;border-radius:30px;margin-left:35px;box-shadow:0px 10px 0px 10px  #9A9A9A">
+<center>
+<label> First Name </label>
+<br><br>
+<input id="A" type="text" placeholder="Write Your First Name" style="width:500px;height:30px;font-family:Times New Roman">
+<br><br>
+<label> Last Name </label>
+<br><br>
+<input id="b" type="text" placeholder="Write Your Last Name" style="width:500px;height:30px;font-family:Times New Roman">
+<br><br>
+<label> Country </label>
+<br><br>
+<select id="C" dir="ltr" style="width:500px;height:30px;font-family:Times New Roman">
+<option disabled selected value="0"> -- Choose Country-- </option>
+<option> Egypt </option>
+<option> UAE </option>
+<option> Kuwait </option>
+<option> Saudi Arabic </option>
+</select>
+<br><br>
+<label> Subject </label>
+<br><br>
+<textarea id="D" style="width:500px;height:150px;font-family:Times New Roman"></textarea>
+<br><br>
+</center>
+</form>
+<br><br>
+<div id="out" style="margin-left:700px;margin-top:-500px;border:1px solid white;width:600px;height:400px;background-color:#fff;color:#000;font-family:Times New Roman;border-radius:30px;box-shadow:0px 10px 0px 10px  #9A9A9A">
+
+</div>
+<br><br>
+<center>
+<button id="B" onclick="MyB()" style="color:#fff;width:200px;height:35px;background-color:green;font-family:Times New Roman;font-size:25px;margin-top:100px"> Print </button>
+</center>
+<br><br>
+</div>
+</body>
+</html>

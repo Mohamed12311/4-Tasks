@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Page4</title>
+<meta charset="UTF-8">
+<style>
+.I{
+    background-color:#64ffda;
+	padding-bottom:1px;
+	border-radius: 0px 90px 0px 90px;
+}
+nav{
+	text-align:center;
+	background-color:#004d40;
+	border-radius: 30px;
+}
+nav ul{
+	width:auto;
+	overflow:auto;
+	margin-right:60px;
+}
+nav ul li{
+	display:inline-block;
+	list-style:none;
+	padding:25px 25px;
+}
+nav ul li:hover{
+	border:1px dotted #fff;
+	
+}
+	nav ul .active{
+	border:1px dotted #fff;
+}
+nav ul li a{
+	text-decoration:none;
+	color:#fff;
+	font-size:20px;
+}
+table{
+	background-color:#fff;
+}
+#TotalTips{
+	font-size:30px;
+	text-align:center;
+}
+</style>
+<script>
+function MyB(){
+    var A = document.getElementById('A').value;
+    var C = document.getElementById('C').value;
+	var T = document.getElementsByTagName('table')[0];
+	var B = T.insertRow(1);
+	
+	var ce11 = B.insertCell(0);
+	var ce12 = B.insertCell(1);
+	
+	ce11.innerHTML = C;
+	ce12.innerHTML = A; 
+    
+	var Total = parseInt(document.getElementById('TotalTips').textContent);
+	Total +=parseInt(document.getElementById('C').value);
+    document.getElementById('TotalTips').innerHTML=Total +'$';
+}
+</script>
+</head>
+<body>
+<div class="I">
+<img src="index1.png" width="100" height="100">
+<p style="margin-left:980px;font-size:30px;color:#00695c"> Wellcome To DELL Website <p>
+</div>
+<div style="background-color:#fff9c4;padding-top:4px">
+<nav>
+<ul>
+<li><a href="#"> Home </a></li>
+<li><a href="#"> Services </a></li>
+<li><a href="#"> Products </a></li>
+<li><a href="#"> About US </a></li>
+<li><a href="#"> Contact US </a></li>
+</ul>
+</nav>
+<center>
+<table border="2" dir="rtl" width="80%" height="35" id="T">
+<tr style="background-color:#F94E03;color:#fff">
+<th> Price </th>
+<th> Product </th>
+</tr>
+</table>
+</center>
+<br><br>
+<center>
+<form>
+<select dir="ltr" style="font-family:Times New Roman;font-weight:bold;width:400px;height:25px"id="A">
+<option disabled selected value="0"> -- Choose The Product </option>
+<option> Laptop </option>
+<option> Keyboard </option>
+<option> Tablet </option>
+<option> Computer </option>
+</select>
+<input type="text" style="font-family:Times New Roman;font-weight:bold;width:400px;height:20px" id="C"/>
+</form>
+</center>
+<br><br>
+<center>
+<button id="B" onclick="MyB()" style="width:150px;height:30px;font-family:Times New Roman;background-color:green;color:#fff;font-size:20px"> Receipt </button>
+</center>
+<br><br>
+<div id="TotalTips">0$</div>
+</div>
+<br><br>
+<br><br>
+<br><br>
+</div>
+</body>
+</html>

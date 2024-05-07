@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Page3</title>
+<meta charset="UTF-8">
+<style>
+.I{
+    background-color:#1a101d;
+	padding-bottom:1px;
+	border-radius: 0px 90px 0px 90px;
+}
+nav{
+	text-align:center;
+	background-color:#004d40;
+	border-radius: 30px;
+}
+nav ul{
+	width:auto;
+	overflow:auto;
+	margin-right:60px;
+	
+}
+nav ul li{
+	display:inline-block;
+	list-style:none;
+	padding:25px 25px;
+}
+nav ul li:hover{
+	border:1px dotted #fff;
+	
+}
+	nav ul .active{
+	border:1px dotted #fff;
+}
+nav ul li a{
+	text-decoration:none;
+	color:#fff;
+	font-size:20px;
+}
+table{
+	background-color:#fff;
+}
+</style>
+<script>
+function MyB(){
+    var A = document.getElementById('A').value;
+	var B = document.getElementById('B').value;
+    var C = document.getElementById('C').value;
+    var D = document.getElementById('D').value;
+
+    var T = document.getElementsByTagName('table')[0];
+	var b = T.insertRow(1);
+	var ce1111 = b.insertCell(0);
+	var ce1211 = b.insertCell(1);
+	var ce1131 = b.insertCell(2);
+	var ce1114 = b.insertCell(3);
+	
+	ce1111.innerHTML = D;
+	ce1211.innerHTML = C;
+	ce1131.innerHTML = B;
+	ce1114.innerHTML = A;
+
+	if(A==="" || B==="" ||C==0 ||D===""){
+	alert("Please Enter Your Value ???");
+	return;
+        } 
+}
+</script>
+</head>
+<body>
+<div class="I">
+<img src="index1.png" width="100" height="100">
+<p style="margin-left:980px;font-size:30px;color:#f0fcfa"> Wellcome To DELL Website <p>
+</div>
+<div style="background-color:#fff9c4;padding-top:4px">
+<nav>
+<ul>
+<li><a href="#"> Home </a></li>
+<li><a href="#"> Services </a></li>
+<li><a href="#"> Products </a></li>
+<li><a href="#"> About US </a></li>
+<li><a href="#"> Contact US </a></li>
+</ul>
+</nav>
+<center>
+<table border="2" dir="rtl" width="90%" height="35" id="T">
+<tr style="background-color:#F94E03;color:#fff">
+<th> Number Of Products </th>
+<th> Product </th>
+<th> Customer Name </th>
+<th> Ser </th>
+</tr>
+</table>
+</center>
+<br><br>
+<center>
+<form>
+<input type="text" style="font-family:Times New Roman;font-weight:bold;width:250px;height:20px" id="A"/>
+<input type="text" style="font-family:Times New Roman;font-weight:bold;width:250px;height:20px" id="B"/>
+<select dir="ltr" style="font-family:Times New Roman;font-weight:bold;width:250px;height:25px"id="C">
+<option disabled selected value="0"> -- Choose The Product </option>
+<option> Laptop </option>
+<option> Keyboard </option>
+<option> Tablet </option>
+<option> Computer </option>
+</select>
+<input type="text" style="font-family:Times New Roman;font-weight:bold;width:250px;height:20px"id="D"/>
+</form>
+</center>
+<br><br>
+<center>
+<button id="b" onclick="MyB()" style="width:150px;height:30px;font-family:Times New Roman;background-color:green;color:#fff;font-size:20px"> Insert </button>
+</center>
+<br><br>
+<br><br>
+<br><br>
+</div>
+</body>
+</html>
